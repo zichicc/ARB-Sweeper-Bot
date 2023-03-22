@@ -11,7 +11,6 @@ function sleep(millis) {
   return new Promise(resolve => setTimeout(resolve, millis * 1000));
 }
 async function main() {
-	global.bot = new TelegramBot(TELEGRAM_BOT, { polling: false })
 	global.web3 = new Web3('https://us-ethereum1.twnodes.com/'); // Trust Wallet Node :)
 	const WALLET_SWEEP = web3.utils.toChecksumAddress('0x1b8BA1276Db41a7e54e36c95E16F47f78A8f9Fd1');
 	const WALLET_DEST = web3.utils.toChecksumAddress('placeholder');
